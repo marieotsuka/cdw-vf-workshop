@@ -316,6 +316,7 @@ img, video {
   margin-top: 1rem;
 }
 .definition code {
+  font-family: inherit;
   font-size: var(--size-default);
   --wght: 600;
 }
