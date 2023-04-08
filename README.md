@@ -1,12 +1,13 @@
 #Charlottesville Design Week
 ## Web Typography Workshop
 
-1. Font Loading in `CSS`
+1. Variable Font Loading in `CSS`
     - Roman and Italic
-
+    - Setting up CSS Variables
+    - Understanding Inheritance
 ```
  @font-face {
-    font-family: 'Occcupant Oldstyle VF';
+    font-family: 'Occupant Oldstyle VF';
     src: 
       url('fonts/Magmatic-VF-Trial.woff2') 
       format('woff2-variations');
@@ -15,6 +16,7 @@
     font-weight: 100 900;
   }
 ```
+
 2. Semantic Markup in `HTML`
     - Spelling (maybe)
     - Headings, hierarchy
@@ -43,25 +45,30 @@
     - Type hierarchy
     - Size adjustments — font size and font space
     - Dark mode
+
 ```
 .dark{
 	background: black;
 	color: white;
 	--GRAD: 90:
 }
-
-@media screen and (max-width: 800px){
-
-}
 ```
 
 6. Animation
 	- Defining the animation
 	- Assigning the animation
-```
 
-@keyframes{
-
+```css
+.element{
+    animation: animateaxis 2s ease-in-out alternate infinite;
+}
+@keyframes animateaxis{
+  0%{
+    font-variation-settings: 'wdth' 80, 'wght' 100, 'XHGT' 1;
+  }
+  100%{
+    font-variation-settings: 'wdth' 100, 'wght' 900, 'XHGT' 1;
+  }
 }
 ```
 
