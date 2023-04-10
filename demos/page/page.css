@@ -33,10 +33,17 @@
 }
 
 
+@font-face {
+    font-family: 'Pentameter VF';
+    font-weight: 100 700;
+    font-stretch: 75% 125%;
+    font-style: oblique -16deg 0deg;
+    src: url(../fonts/Pentameter-VF-Trial.woff2) format("woff2-variations");
+}
 
 :root{
-  --GRAD: 0;
-  --wght: 280;
+  --wght: 270;
+
   --pad: 4rem;
   --pad-small: 1.2rem;
   --size-large: 3rem;
@@ -49,15 +56,21 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+/*    font-variation-settings: 'wdth' var(--wdth), 'wght' var(--wght), 'slnt' var(--slnt);*/
     font-variation-settings: 'wght' var(--wght);
 }
 
 body{
+/*    color: rgb(255 250 240);
+    background: rgb(0 50 40);
+*/
     background: rgb(255 250 240);
     color: rgb(0 50 40);
     font-family: 'OccupantOldstyle VF';
-    font-variation-settings: 'wght' var(--wght);
+/*    font-family: 'Quiosco VF';*/
+/*    font-family: 'Pentameter VF';*/
 }
+
 
 article{
     padding: var(--pad);
@@ -78,8 +91,11 @@ section{
     box-sizing: border-box;
 }
 
+/*em{
+    font-style: normal;
+} be careful of forced italics
+when using a VF with slant axis */
 h1, h2{
-  font-family: 'OccupantOldstyle VF';
   font-size: var(--size-large);
   line-height: 1.0;
   font-weight: normal;
@@ -87,11 +103,14 @@ h1, h2{
 }
 h2{
     --wght: 500;
+
     font-size: var(--size-medium);
     margin: var(--pad) 0;
     margin-bottom: var(--pad-small);
 }
 h3{
+    font-family: 'Magmatic VF';
+    font-variation-settings: 'wdth' var(--wdth), 'wght' var(--wght), 'XHGT' var(--XGHT);
     --wdth: 110;
     --wght: 600;
     --XGHT: 0;
@@ -108,12 +127,16 @@ p{
 strong{
     --wght: 700;
 }
-
-h3, .magmatic{
+figcaption{  
+    margin-top: -70px;
     font-family: 'Magmatic VF';
     font-variation-settings: 'wdth' var(--wdth), 'wght' var(--wght), 'XHGT' var(--XGHT);
+    --wdth: 120; 
+    --wght: 400; 
+    --XGHT: 1;
+    letter-spacing: 0.05em;
+    font-size: var(--size-small);
 }
-
 .transition{
     --wght: 200;
     margin-top: var(--pad);
@@ -123,14 +146,6 @@ h3, .magmatic{
 }
 .transition:hover{
     --wght: 700;
-}
-figcaption{  
-    margin-top: -70px;
-    --wdth: 120; 
-    --wght: 400; 
-    --XGHT: 1;
-    letter-spacing: 0.05em;
-    font-size: var(--size-small);
 }
 
 

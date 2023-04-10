@@ -1,7 +1,6 @@
 
 //See documentation at https://openweathermap.org/current
-//40.7353297,-73.9966676 Parsons
-fetch('http://api.openweathermap.org/data/2.5/weather?q=New York City&appid=a0be2ca7d3101a5b3e8a3bbf580143f6&units=imperial')
+fetch('http://api.openweathermap.org/data/2.5/weather?q=Charlottesville&appid=a0be2ca7d3101a5b3e8a3bbf580143f6&units=imperial')
   .then(response => response.json())
   .then(data => {
     console.log(data);

@@ -63,12 +63,13 @@ h1,h2,h3,h4,h5,h6{
   font-weight: normal;
   line-height: 1.0;
 }
+
 h1{
   --wdth: 120;
   --wght: 200;
   font-size: var(--size-xlarge);
   line-height: 0.8;
-  animation: animateaxis 2s ease-in-out alternate infinite;
+/*  animation: animateaxis 2s ease-in-out alternate infinite;*/
 }
 
 h2{

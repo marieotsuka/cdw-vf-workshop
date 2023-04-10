@@ -216,6 +216,10 @@ blockquote {
   text-indent: -0.5em;
 }
 
+code {
+  font-family: inherit;
+}
+
 a {
   color: var(--color-link);
   text-decoration: none;
@@ -284,12 +288,6 @@ img, video {
   height: auto;
 }
 
-.middle {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
 .arrow {
   font-family: "Occ Arrow";
   font-variation-settings: "wdth" 100;
@@ -304,141 +302,6 @@ img, video {
   right: 0;
 }
 
-.definition {
-  width: 65%;
-  text-align: left;
-}
-.definition dt {
-  font-size: var(--size-large);
-}
-.definition dd {
-  font-size: var(--size-medium);
-  margin-top: 1rem;
-}
-.definition code {
-  font-family: inherit;
-  font-size: var(--size-default);
-  --wght: 600;
-}
-.definition figcaption {
-  margin-top: 1rem;
-}
-
-.interpolation .arrow {
-  display: flex;
-  align-items: center;
-  font-size: 100px;
-}
-
-.interp {
-  font-size: 300px;
-  grid-column: span 3;
-}
-
-.animate {
-  animation-play-state: paused;
-}
-
-.wghtanimate {
-  animation: wghtanimate 1s linear alternate infinite;
-}
-
-@keyframes wghtanimate {
-  0% {
-    font-variation-settings: "wdth" 100, "wght" 100, "slnt" 0;
-  }
-  100% {
-    font-variation-settings: "wdth" 100, "wght" 700, "slnt" 0;
-  }
-}
-.wdthanimate {
-  animation: wdthanimate 1s linear alternate infinite;
-}
-
-@keyframes wdthanimate {
-  0% {
-    font-variation-settings: "wdth" 75, "wght" 400, "slnt" 0;
-  }
-  100% {
-    font-variation-settings: "wdth" 125, "wght" 400, "slnt" 0;
-  }
-}
-.maganimate {
-  animation: maganimate 1s linear alternate infinite;
-}
-
-@keyframes maganimate {
-  0% {
-    font-variation-settings: "wdth" 100, "wght" 100;
-  }
-  100% {
-    font-variation-settings: "wdth" 100, "wght" 900;
-  }
-}
-.mag-wdth-animate {
-  animation: magwdthanimate 1s linear alternate infinite;
-}
-
-@keyframes magwdthanimate {
-  0% {
-    font-variation-settings: "wdth" 50, "wght" 400;
-  }
-  100% {
-    font-variation-settings: "wdth" 150, "wght" 400;
-  }
-}
-.slantanimate {
-  --wdth: 100;
-  --wght: 400;
-  --slnt: 0;
-  letter-spacing: -0.01em;
-  animation: slantanimate 1s linear alternate infinite;
-}
-
-@keyframes slantanimate {
-  0% {
-    font-variation-settings: "wdth" 80, "wght" 400, "slnt" -16;
-  }
-  80% {
-    font-variation-settings: "wdth" 80, "wght" 400, "slnt" 0;
-  }
-  100% {
-    font-variation-settings: "wdth" 80, "wght" 400, "slnt" 0;
-  }
-}
-.vfanimate {
-  animation: pentametervf 4s linear alternate infinite;
-}
-
-@keyframes pentametervf {
-  0% {
-    font-variation-settings: "wght" 100, "wdth" 125, "slnt" 0;
-  }
-  12.5% {
-    font-variation-settings: "wght" 700, "wdth" 125, "slnt" 0;
-  }
-  25% {
-    font-variation-settings: "wght" 700, "wdth" 75, "slnt" 0;
-  }
-  37.5% {
-    font-variation-settings: "wght" 100, "wdth" 75, "slnt" 0;
-  }
-  50% {
-    font-variation-settings: "wght" 100, "wdth" 75, "slnt" -16;
-  }
-  62.5% {
-    font-variation-settings: "wght" 700, "wdth" 75, "slnt" -16;
-  }
-  75% {
-    font-variation-settings: "wght" 700, "wdth" 125, "slnt" -16;
-  }
-  82.5% {
-    font-variation-settings: "wght" 100, "wdth" 125, "slnt" -16;
-  }
-  100% {
-    font-variation-settings: "wght" 100, "wdth" 125, "slnt" 0;
-  }
-}
 .arrowanimate {
   animation: arrowanimate 1s 400ms linear alternate infinite forwards;
 }
@@ -458,6 +321,7 @@ img, video {
 table {
   --wght: 400;
   margin: auto;
+  margin-top: var(--pad);
   font-size: var(--size-table);
   text-align: left;
   border-collapse: collapse;
@@ -467,7 +331,10 @@ table th {
   border-bottom: 2px solid;
 }
 table th, table td {
-  padding: 0.25em 0.5em 0.25em 0;
+  padding: 0.5em 2em 0.5em 0;
+}
+table td {
+  border-bottom: 1px solid;
 }
 
 /*# sourceMappingURL=styles.css.map */
